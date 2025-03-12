@@ -1,24 +1,53 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    margin: 50px;
-    background-color: #f4f4f4;
-}
-
-h1 {
-    color: #333;
-}
-
-button {
-    background-color: #007bff;
+    margin: 0;
+    background-color: #1a1a1a;
     color: white;
-    padding: 10px 20px;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 20px;
 }
 
-button:hover {
-    background-color: #0056b3;
+header {
+    background-color: #222;
+    padding: 20px;
+}
+
+.logo {
+    width: 150px;
+}
+
+h1, h2 {
+    color: #e0a800;
+}
+
+section {
+    padding: 20px;
+}
+
+.galeria {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.galeria img {
+    width: 30%;
+    border-radius: 5px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: #333;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #222;
+    padding: 15px;
+    margin-top: 20px;
 }

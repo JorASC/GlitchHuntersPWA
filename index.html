@@ -3,15 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi PWA</title>
+    <title>Vylnara y la Espada Perdida</title>
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
 </head>
 <body>
-    <h1>Bienvenido a Mi PWA</h1>
-    <p>Esta es una aplicación web progresiva hecha solo con HTML y CSS.</p>
 
-    <button onclick="notifyUser()">Enviar Notificación</button>
+    <header>
+        <img src="img/logo-glitch-hunters.png" alt="Glitch Hunters" class="logo">
+        <h1>Vylnara y la Espada Perdida</h1>
+    </header>
+
+    <section id="historia">
+        <h2>Historia</h2>
+        <p>En el reino de Vylnara, una profecía ha sido rota. La legendaria Espada Perdida ha desaparecido y con ella, la única esperanza de paz. Enfréntate a enemigos despiadados, descubre secretos antiguos y reclama tu destino.</p>
+    </section>
+
+    <section id="imagenes">
+        <h2>Galería</h2>
+        <div class="galeria">
+            <img src="img/screenshot1.jpg" alt="Escena del juego">
+            <img src="img/screenshot2.jpg" alt="Batalla en Vylnara">
+            <img src="img/screenshot3.jpg" alt="Exploración de mazmorras">
+        </div>
+    </section>
+
+    <section id="caracteristicas">
+        <h2>Características del Juego</h2>
+        <ul>
+            <li>Aventura en un mundo isométrico</li>
+            <li>Exploración de mazmorras y combates</li>
+            <li>Historia inmersiva y personajes únicos</li>
+            <li>Disponible en Steam y Epic Games</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>Desarrollado por Glitch Hunters | Todos los derechos reservados</p>
+    </footer>
 
     <script>
         if ('serviceWorker' in navigator) {
@@ -19,18 +48,7 @@
             .then(() => console.log("Service Worker registrado"))
             .catch(err => console.log("Error al registrar el Service Worker", err));
         }
-
-        function notifyUser() {
-            if ('Notification' in window && Notification.permission === "granted") {
-                new Notification("Hola, esta es una notificación de tu PWA.");
-            } else if ('Notification' in window) {
-                Notification.requestPermission().then(permission => {
-                    if (permission === "granted") {
-                        new Notification("Ahora recibirás notificaciones.");
-                    }
-                });
-            }
-        }
     </script>
+
 </body>
 </html>

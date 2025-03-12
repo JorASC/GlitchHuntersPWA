@@ -1,13 +1,13 @@
 {
-    "name": "Mi PWA",
-    "short_name": "PWA",
+    "name": "Vylnara y la Espada Perdida",
+    "short_name": "Vylnara",
     "start_url": "/index.html",
     "display": "standalone",
-    "background_color": "#ffffff",
-    "theme_color": "#007bff",
+    "background_color": "#1a1a1a",
+    "theme_color": "#e0a800",
     "icons": [
         {
-            "src": "icon.png",
+            "src": "img/logo-vylnara.png",
             "sizes": "192x192",
             "type": "image/png"
         }
