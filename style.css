@@ -1,83 +1,107 @@
+/* Estilos Generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Cinzel', serif; /* Fuente inspirada en juegos de fantasía */
     text-align: center;
     margin: 0;
-    background-color: #1a1a1a;
+    background: url('img/background.jpg') no-repeat center center fixed;
+    background-size: cover;
     color: white;
 }
 
+/* ENCABEZADO */
 header {
-    background-color: #222;
+    background: rgba(0, 0, 0, 0.8);
     padding: 20px;
+    border-bottom: 3px solid #e0a800;
 }
 
 .logo {
-    width: 150px;
+    width: 120px;
 }
 
-h1, h2 {
-    color: #e0a800;
-}
-
-section {
-    padding: 20px;
-}
-
-.galeria {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.galeria img {
-    width: 30%;
-    border-radius: 5px;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li {
-    background: #333;
-    padding: 10px;
-    margin: 5px;
-    border-radius: 5px;
-}
-
-footer {
-    background-color: #222;
-    padding: 15px;
-    margin-top: 20px;
-}
-/* Estilo de la barra de navegación */
+/* BARRA DE NAVEGACIÓN */
 nav {
-    background-color: #333;
-    padding: 10px 0;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px 0;
+    border-radius: 10px;
+    margin: 10px auto;
+    max-width: 500px;
+    backdrop-filter: blur(5px);
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     padding: 0;
     margin: 0;
 }
 
 nav ul li {
-    margin: 0 15px;
+    display: inline;
 }
 
 nav ul li a {
     text-decoration: none;
     color: white;
     font-size: 18px;
-    padding: 10px 15px;
-    transition: background 0.3s;
+    padding: 12px 18px;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
 }
 
 nav ul li a:hover {
-    background-color: #e0a800;
+    background: #e0a800;
+    color: black;
+}
+
+/* SECCIONES */
+section {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* GALERÍA */
+.galeria {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.galeria img {
+    width: 30%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+}
+
+/* LISTA DE CARACTERÍSTICAS */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    margin: 5px;
     border-radius: 5px;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 14px;
+    border-top: 3px solid #e0a800;
 }
