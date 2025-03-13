@@ -14,16 +14,23 @@
     <header>
         <img src="IMG/logo-glitch-hunters.png" alt="Glitch Hunters" class="logo">
         <h1>Glitch Hunters</h1>
-        
-        <!-- Barra de navegación -->
-        <nav>
-            <ul>
-                <li><a href="historia.html">Historia</a></li>
-                <li><a href="creacion.html">Creación</a></li>
-                <li><a href="proceso.html">Proceso</a></li>
-            </ul>
-        </nav>
-        
+    
+        <!-- Menú principal -->
+        <div class="menu-container">
+            <!-- Menú hamburguesa (visible en pantallas pequeñas) -->
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    
+            <!-- Barra de navegación (visible en pantallas grandes, oculta en móviles) -->
+            <nav id="menu">
+                <span class="menu-close" onclick="toggleMenu()">✖</span>
+                <ul>
+                    <li><a href="historia.html">Historia</a></li>
+                    <li><a href="creacion.html">Creación</a></li>
+                    <li><a href="proceso.html">Proceso</a></li>
+                </ul>
+            </nav>
+        </div>
+    
         <h1>Vylnara y la Espada Perdida</h1>
     </header>
 
@@ -62,6 +69,11 @@
             .catch(err => console.log("Error al registrar el Service Worker", err));
         }
     </script>
-
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.classList.toggle("active");
+        }
+    </script>
 </body>
 </html>

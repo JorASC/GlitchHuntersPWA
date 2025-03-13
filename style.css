@@ -19,42 +19,115 @@ header {
     width: 120px;
 }
 
-/* BARRA DE NAVEGACIÓN */
-nav {
+/* Contenedor del menú */
+.menu-container {
+    position: relative;
+}
+
+/* Icono del menú hamburguesa (solo en pantallas pequeñas) */
+.menu-icon {
+    display: none; /* Oculto por defecto */
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    background: #333;
+    color: white;
+    border-radius: 5px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+}
+
+/* Menú general */
+#menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: rgba(255, 255, 255, 0.1);
     padding: 12px 0;
     border-radius: 10px;
     margin: 10px auto;
-    max-width: 500px;
+    max-width: 600px;
     backdrop-filter: blur(5px);
 }
 
-nav ul {
+/* Lista de navegación en pantallas grandes */
+#menu ul {
     list-style: none;
     display: flex;
-    justify-content: space-around;
+    gap: 15px;
     padding: 0;
     margin: 0;
 }
 
-nav ul li {
-    display: inline;
+/* Estilos de los enlaces */
+#menu ul li {
+    display: flex;
 }
 
-nav ul li a {
+#menu ul li a {
     text-decoration: none;
     color: white;
     font-size: 18px;
-    padding: 12px 18px;
+    padding: 10px 20px;
     border-radius: 8px;
-    transition: background 0.3s ease-in-out;
+    background: #333;
+    transition: background 0.3s ease-in-out, color 0.3s;
 }
 
-nav ul li a:hover {
+#menu ul li a:hover {
     background: #e0a800;
     color: black;
 }
 
+/* MENÚ DESPLEGABLE (solo en pantallas pequeñas) */
+@media (max-width: 768px) {
+    /* Mostrar el icono hamburguesa */
+    .menu-icon {
+        display: block;
+    }
+
+    /* Ocultar la barra de navegación en móviles */
+    #menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: -250px;  /* Comienza fuera de la pantalla */
+        width: 250px;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.9);
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+        padding-top: 60px;
+        transition: left 0.3s ease-in-out;
+        z-index: 999;
+        flex-direction: column;
+    }
+
+    /* Mostrar el menú cuando se active */
+    #menu.active {
+        display: flex;
+        left: 0;
+    }
+
+    /* Convertimos la lista de navegación en vertical */
+    #menu ul {
+        flex-direction: column;
+        align-items: left;
+        gap: 20px;
+        padding-left: 20px;
+    }
+
+    /* Botón de cierre dentro del menú */
+    .menu-close {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 30px;
+        cursor: pointer;
+        color: white;
+    }
+}
 /* SECCIONES */
 section {
     background: rgba(0, 0, 0, 0.7);
