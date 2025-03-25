@@ -1,16 +1,11 @@
 {
     "name": "Vylnara y la Espada Perdida",
     "short_name": "Vylnara",
-    "start_url": "index.html",
+    "start_url": "./index.html",
     "display": "standalone",
     "background_color": "#1a1a1a",
     "theme_color": "#e0a800",
     "icons": [
-        {
-            "src": "img/logo-glitch-hunters.png",
-            "sizes": "4134x5847",
-            "type": "image/png"
-        },
         {
             "src": "img/logo-glitch-hunters-48.png",
             "sizes": "48x48",
