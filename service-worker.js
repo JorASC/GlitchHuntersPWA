@@ -8,21 +8,21 @@ self.addEventListener('install', event => {
                 './style.css',
                 './manifest.json',
 
-                './img/logo-glitch-hunters.png',
-                './img/logo-vylnara.png',
-                './img/logo-vylnara-48.png',
-                './img/logo-vylnara-72.png',
-                './img/logo-vylnara-96.png',
-                './img/logo-vylnara-144.png',
-                './img/logo-vylnara-192.png',
-                './img/logo-vylnara-512.png',
+                './IMG/logo-glitch-hunters.png',
+                './IMG/logo-vylnara.png',
+                './IMG/logo-vylnara-48.png',
+                './IMG/logo-vylnara-72.png',
+                './IMG/logo-vylnara-96.png',
+                './IMG/logo-vylnara-144.png',
+                './IMG/logo-vylnara-192.png',
+                './IMG/logo-vylnara-512.png',
 
-                './img/screenshot1.jpg',
-                './img/screenshot2.jpg',
-                './img/screenshot3.jpg',
+                './IMG/screenshot1.jpg',
+                './IMG/screenshot2.jpg',
+                './IMG/screenshot3.jpg',
 
-                './img/desktop.jpg',
-                './img/mobile.jpg'
+                './IMG/desktop.jpg',
+                './IMG/mobile.jpg'
             ]);
         })
     );
