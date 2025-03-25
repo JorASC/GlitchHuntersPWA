@@ -1,28 +1,28 @@
 self.addEventListener('install', event => {
     console.log("Service Worker instalado");
+
     event.waitUntil(
         caches.open('vylnara-cache').then(cache => {
             return cache.addAll([
-                '/',
-                'index.html',
-                'style.css',
-                'manifest.json',
+                './index.html',
+                './style.css',
+                './manifest.json',
 
-                'img/logo-glitch-hunters.png',
-                'img/logo-vylnara.png',
-                'img/logo-vylnara-48.png',
-                'img/logo-vylnara-72.png',
-                'img/logo-vylnara-96.png',
-                'img/logo-vylnara-144.png',
-                'img/logo-vylnara-192.png',
-                'img/logo-vylnara-512.png',
-                
-                'img/screenshot1.jpg',
-                'img/screenshot2.jpg',
-                'img/screenshot3.jpg',
+                './img/logo-glitch-hunters.png',
+                './img/logo-vylnara.png',
+                './img/logo-vylnara-48.png',
+                './img/logo-vylnara-72.png',
+                './img/logo-vylnara-96.png',
+                './img/logo-vylnara-144.png',
+                './img/logo-vylnara-192.png',
+                './img/logo-vylnara-512.png',
 
-                'img/desktop.jpg',
-                'img/mobile.jpg',
+                './img/screenshot1.jpg',
+                './img/screenshot2.jpg',
+                './img/screenshot3.jpg',
+
+                './img/desktop.jpg',
+                './img/mobile.jpg'
             ]);
         })
     );
