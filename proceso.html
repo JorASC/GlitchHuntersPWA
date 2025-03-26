@@ -1,36 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Proceso</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="manifest" href="manifest.json">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proceso - Vylnara</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <header>
+    <img src="IMG/logo-glitch-hunters.png" alt="Glitch Hunters" class="logo">
     <h1>Glitch Hunters</h1>
-    <nav>
-      <a href="index.html">Inicio</a>
-      <a href="proceso.html">Proceso</a>
-      <a href="historia.html">Historia</a>
-    </nav>
+
+    <div class="menu-container">
+      <div class="menu-icon" onclick="toggleMenu()">☰</div>
+      <nav id="menu">
+        <span class="menu-close" onclick="toggleMenu()">✖</span>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="historia.html">Historia</a></li>
+          <li><a href="creacion.html">Creación</a></li>
+          <li><a href="proceso.html">Proceso</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <h1>Vylnara y la Espada Perdida</h1>
   </header>
 
-  <main>
-    <section>
-      <h2>Proceso de Desarrollo</h2>
-      <p>Aquí puedes describir cómo fue creado el juego, las herramientas utilizadas, el equipo involucrado, decisiones de diseño, etc.</p>
-    </section>
-  </main>
+  <section id="proceso">
+    <h2>Proceso de Desarrollo</h2>
+    <p>Describe el desarrollo técnico y artístico del juego: fases del proyecto, pruebas de jugabilidad, diseño de niveles, animaciones, implementación del motor, trabajo en equipo, etc.</p>
+  </section>
 
   <footer>
-    <p>&copy; 2025 Glitch Hunters</p>
+    <p>Desarrollado por Glitch Hunters | Todos los derechos reservados</p>
   </footer>
 
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('./service-worker.js');
+    }
+    function toggleMenu() {
+      var menu = document.getElementById("menu");
+      menu.classList.toggle("active");
     }
   </script>
 </body>

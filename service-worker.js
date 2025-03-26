@@ -5,8 +5,11 @@ self.addEventListener('install', event => {
         caches.open('vylnara-cache').then(cache => {
             return cache.addAll([
                 './index.html',
+                './historia.html',
+                './proceso.html',
                 './style.css',
                 './manifest.json',
+                './creacion.html',
 
                 './IMG/logo-glitch-hunters.png',
                 './IMG/logo-vylnara.png',
