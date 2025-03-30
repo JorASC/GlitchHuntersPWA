@@ -1,155 +1,163 @@
-/* Estilos Generales */
+/* ===== GLOBAL STYLES ===== */
 body {
-    font-family: 'Cinzel', serif; /* Fuente inspirada en juegos de fantasía */
-    text-align: center;
+    font-family: 'Cinzel', serif;
     margin: 0;
-    background: url('img/background.jpg') no-repeat center center fixed;
+    text-align: center;
+    background: #0d0d0d url('img/background.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: white;
+    color: #f0f0f0;
 }
 
-/* ENCABEZADO */
+/* ===== HEADER ===== */
 header {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 20px;
+    background: rgba(10, 10, 10, 0.95);
+    padding: 30px 20px;
     border-bottom: 3px solid #e0a800;
+    box-shadow: 0 0 20px rgba(0,0,0,0.8);
 }
 
 .logo {
-    width: 120px;
+    width: 100px;
+    margin-bottom: 10px;
 }
 
-/* Contenedor del menú */
+header h1 {
+    font-size: 2.2rem;
+    margin: 10px 0;
+    color: #f8f8f8;
+}
+
+/* ===== MENU ===== */
 .menu-container {
     position: relative;
 }
 
-/* Icono del menú hamburguesa (solo en pantallas pequeñas) */
 .menu-icon {
-    display: none; /* Oculto por defecto */
-    font-size: 30px;
+    display: none;
+    font-size: 28px;
     cursor: pointer;
     padding: 10px;
-    background: #333;
+    background: #1a1a1a;
     color: white;
-    border-radius: 5px;
+    border-radius: 6px;
     position: fixed;
-    top: 10px;
-    left: 10px;
+    top: 15px;
+    left: 15px;
     z-index: 1000;
 }
 
-/* Menú general */
 #menu {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 12px 0;
-    border-radius: 10px;
-    margin: 10px auto;
-    max-width: 600px;
-    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px 0;
+    border-radius: 12px;
+    margin: 15px auto;
+    max-width: 700px;
+    backdrop-filter: blur(8px);
 }
 
-/* Lista de navegación en pantallas grandes */
 #menu ul {
     list-style: none;
     display: flex;
-    gap: 15px;
-    padding: 0;
+    gap: 20px;
     margin: 0;
-}
-
-/* Estilos de los enlaces */
-#menu ul li {
-    display: flex;
+    padding: 0;
 }
 
 #menu ul li a {
     text-decoration: none;
-    color: white;
-    font-size: 18px;
-    padding: 10px 20px;
+    font-size: 17px;
+    padding: 12px 24px;
     border-radius: 8px;
-    background: #333;
-    transition: background 0.3s ease-in-out, color 0.3s;
+    color: white;
+    background: #222;
+    transition: background 0.3s, color 0.3s;
 }
 
 #menu ul li a:hover {
     background: #e0a800;
-    color: black;
+    color: #111;
 }
 
-/* MENÚ DESPLEGABLE (solo en pantallas pequeñas) */
+.menu-close {
+    display: none;
+}
+
+/* ===== RESPONSIVE MENU ===== */
 @media (max-width: 768px) {
-    /* Mostrar el icono hamburguesa */
     .menu-icon {
         display: block;
     }
 
-    /* Ocultar la barra de navegación en móviles */
     #menu {
         display: none;
         position: fixed;
         top: 0;
-        left: -250px;  /* Comienza fuera de la pantalla */
+        left: -100%;
         width: 250px;
         height: 100vh;
-        background: rgba(0, 0, 0, 0.9);
-        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
-        padding-top: 60px;
+        background: rgba(0, 0, 0, 0.95);
+        box-shadow: 3px 0 15px rgba(0, 0, 0, 0.5);
+        padding-top: 80px;
         transition: left 0.3s ease-in-out;
-        z-index: 999;
         flex-direction: column;
+        z-index: 999;
     }
 
-    /* Mostrar el menú cuando se active */
     #menu.active {
         display: flex;
         left: 0;
     }
 
-    /* Convertimos la lista de navegación en vertical */
     #menu ul {
         flex-direction: column;
-        align-items: left;
-        gap: 20px;
+        gap: 25px;
+        align-items: flex-start;
         padding-left: 20px;
     }
 
-    /* Botón de cierre dentro del menú */
     .menu-close {
+        display: block;
         position: absolute;
-        top: 10px;
+        top: 15px;
         right: 20px;
-        font-size: 30px;
-        cursor: pointer;
+        font-size: 28px;
         color: white;
+        cursor: pointer;
     }
 }
-/* SECCIONES */
+
+/* ===== SECTIONS ===== */
 section {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    margin: 20px auto;
+    background: rgba(20, 20, 20, 0.8);
+    padding: 30px;
+    margin: 30px auto;
     width: 90%;
-    max-width: 800px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    max-width: 900px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
-/* GALERÍA */
+section h2 {
+    color: #e0a800;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+/* ===== GALLERY ===== */
 .galeria {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
 .galeria img {
     width: 30%;
-    border-radius: 10px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
     transition: transform 0.3s ease-in-out;
 }
 
@@ -157,24 +165,61 @@ section {
     transform: scale(1.05);
 }
 
-/* LISTA DE CARACTERÍSTICAS */
+/* ===== FEATURE LIST ===== */
 ul {
     list-style: none;
     padding: 0;
 }
 
 ul li {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 10px;
-    margin: 5px;
-    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.07);
+    padding: 12px 15px;
+    margin: 8px 0;
+    border-radius: 6px;
+    font-size: 1rem;
+    text-align: left;
 }
 
-/* PIE DE PÁGINA */
+/* ===== FOOTER ===== */
 footer {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 15px;
-    margin-top: 20px;
+    background: rgba(10, 10, 10, 0.9);
+    padding: 20px;
+    margin-top: 30px;
     font-size: 14px;
     border-top: 3px solid #e0a800;
+    color: #bbb;
 }
+
+.equipo-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 30px auto;
+    max-width: 600px;
+  }
+  
+  .miembro {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  }
+  
+  .miembro img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e0a800;
+  }
+  
+  .miembro p {
+    margin: 0;
+    text-align: left;
+    color: #f0f0f0;
+    font-size: 1rem;
+  }
+  

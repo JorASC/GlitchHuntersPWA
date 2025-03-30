@@ -7,12 +7,37 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="manifest" href="manifest.json" />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .story-image {
+      width: 100%;
+      max-width: 700px;
+      border-radius: 12px;
+      margin: 30px auto;
+      display: block;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+      transition: transform 0.3s ease;
+    }
+
+    .story-image:hover {
+      transform: scale(1.02);
+    }
+
+    .caption {
+      font-size: 0.9rem;
+      color: #ccc;
+      font-style: italic;
+      margin-bottom: 40px;
+    }
+  </style>
 </head>
 
 <body>
   <header>
     <img src="IMG/logo-glitch-hunters.png" alt="Glitch Hunters" class="logo">
-    <h1>Glitch Hunters</h1>
+    <div>
+        <h1>Glitch Hunters</h1>
+        <p style="font-size: 1.2rem; margin-top: 5px; color: #ccc;">Vylnara y la Espada Perdida</p>
+    </div>
 
     <div class="menu-container">
       <div class="menu-icon" onclick="toggleMenu()">☰</div>
@@ -22,7 +47,6 @@
           <li><a href="index.html">Inicio</a></li>
           <li><a href="historia.html">Historia</a></li>
           <li><a href="creacion.html">Creación</a></li>
-          <li><a href="proceso.html">Proceso</a></li>
         </ul>
       </nav>
     </div>
@@ -32,7 +56,48 @@
 
   <section id="historia">
     <h2>Historia Expandida</h2>
-    <p>En esta sección puedes expandir la narrativa: contar más sobre los personajes, la leyenda del abuelo de Vylnara, el origen de la espada, el mundo donde se desarrolla el juego y los conflictos que lo envuelven.</p>
+
+    <p>
+      Vynara siempre llevó una vida tranquila en un pequeño pueblo escondido entre los bosques de Aelorin, donde ejercía el noble oficio de carpintero...
+    </p>
+    <img src="IMG/story-placeholder1.jpg" alt="Vynara trabajando como carpintera" class="story-image">
+    <div class="caption">Vynara en su taller, ajena al destino que la espera.</div>
+
+    <p>
+      Pero todo cambió el día en que el cielo se tiñó de rojo y una sombra oscura cayó sobre su aldea...
+    </p>
+    <img src="IMG/story-placeholder2.jpg" alt="Criatura emergiendo del cielo rojo" class="story-image">
+    <div class="caption">La llegada del monstruo trajo oscuridad y caos.</div>
+
+    <p>
+      En medio del caos, una criatura antigua y poderosa emergió: un monstruo que alguna vez fue derrotado por su abuelo, Elarion...
+    </p>
+
+    <p>
+      Ahora, el monstruo ha regresado, más fuerte y lleno de odio...
+    </p>
+    <img src="IMG/story-placeholder3.jpg" alt="Elarion siendo capturado" class="story-image">
+    <div class="caption">Elarion es capturado, marcando el inicio de la aventura.</div>
+
+    <p>
+      Vynara, impulsada por el amor por su abuelo, descubre que la única esperanza reside en reunir los fragmentos de la espada...
+    </p>
+
+    <p>
+      Guiada por una voz misteriosa que resuena en sus sueños...
+    </p>
+    <img src="IMG/story-placeholder4.jpg" alt="Voz misteriosa guiando a Vynara" class="story-image">
+    <div class="caption">Una voz desconocida despierta el poder dormido en Vynara.</div>
+
+    <p>
+      En su viaje conocerá aliados inesperados, enfrentará antiguas profecías...
+    </p>
+    <img src="IMG/story-placeholder5.jpg" alt="Mapa del mundo de Virelda" class="story-image">
+    <div class="caption">El vasto mundo de Virelda, lleno de secretos y peligros.</div>
+
+    <p style="font-style: italic; color: #e0a800;">
+      La aventura comienza cuando el legado despierta.
+    </p>
   </section>
 
   <footer>
