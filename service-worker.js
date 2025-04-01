@@ -25,7 +25,19 @@ self.addEventListener('install', event => {
                 './IMG/screenshot3.jpg',
 
                 './IMG/desktop.jpg',
-                './IMG/mobile.jpg'
+                './IMG/mobile.jpg',
+
+                './IMG/members/diego-castillo.jpg',
+                './IMG/members/elias-orozco.png',
+                './IMG/members/jorge-sanchez.jpg',
+                './IMG/members/juan-castro.jpg',
+                './IMG/members/alejandro-tarango.jpg',
+
+                './IMG/story/criatura-cielo-rojo.jpg',
+                './IMG/story/elarion-viejo.jpg',
+                './IMG/story/storyboard.jpg',
+                './IMG/story/storyboard2.jpg',
+                './IMG/story/vynara-trabajand-carpinteria.jpg',
             ]);
         })
     );
