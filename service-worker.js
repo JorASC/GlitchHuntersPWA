@@ -19,6 +19,7 @@ self.addEventListener('install', event => {
                 './IMG/logo-vylnara-144.png',
                 './IMG/logo-vylnara-192.png',
                 './IMG/logo-vylnara-512.png',
+                './IMG/mapa-vynara',
 
                 './IMG/screenshot1.jpg',
                 './IMG/screenshot2.jpg',
